@@ -1,102 +1,145 @@
-/* styles.css */
+/* walkies.css – versión 3  
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+/* ===== Variables ===== */
+:root{
+  --font-body:'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading:'Inter', 'Segoe UI', sans-serif;
+
+  --bg-page:#ffffff;            /* fondo general */
+  --bg-section:#f8f9fa;         /* secciones suaves */
+  --bg-card:#ffffff;            /* tarjetas & header */
+  --text-main:#202124;          /* texto principal (gris casi negro) */
+  --text-muted:#5f6368;         /* texto secundario */
+  --accent:#00b67a;             /* verde REVIEWS.io */
+  --accent-dark:#009261;        /* hover */
+  --border:#e5e7eb;             /* gris claro bordes */
 }
 
-header, footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
+/* modo oscuro opcional (mantenga contraste) */
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg-page:#111;--bg-section:#1b1b1b;--bg-card:#1e1e1e;
+    --text-main:#e8e8e8;--text-muted:#a7a7a7;
+    --border:#333;
+  }
 }
 
-header h1, footer p {
-  margin: 0;
+/* ===== Reset ===== */
+*,*::before,*::after{box-sizing:border-box}
+body, h1,h2,h3,h4,p,ul,ol,li{margin:0;padding:0;font-weight:400}
+img{max-width:100%;display:block}
+
+body{
+  font-family:var(--font-body);
+  background:var(--bg-page);
+  color:var(--text-main);
+  line-height:1.65;
 }
 
-main {
-  padding: 20px;
-  max-width: 1100px;
-  margin: auto;
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ===== Header ===== */
+.site-header{
+  background:var(--bg-card);
+  border-bottom:1px solid var(--border);
+  padding:40px 0 48px;
+  text-align:center;
+}
+.site-header h1{
+  font-family:var(--font-heading);
+  font-size:clamp(1.8rem,4vw,2.4rem);
+  font-weight:700;
+  margin-bottom:16px;
+}
+.tagline{max-width:700px;margin:0 auto;font-size:1rem;color:var(--text-muted)}
+
+/* ===== Intro ===== */
+.intro{max-width:850px;margin:48px auto}
+.intro h2{
+  font-family:var(--font-heading);
+  font-size:1.5rem;
+  font-weight:600;
+  margin-bottom:12px;
+  color:var(--accent);
+}
+.intro p{margin-bottom:16px}
+
+/* ===== Table of contents ===== */
+.toc{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:32px 24px;
+  margin:0 auto 56px;
+  max-width:850px;
+}
+.toc h2{
+  font-size:1.25rem;
+  font-family:var(--font-heading);
+  font-weight:600;
+  color:var(--text-main);
+  margin-bottom:16px;
+  text-align:center;
+}
+.toc ol{list-style:none;columns:2 auto;gap:8px;padding-left:0}
+@media(max-width:600px){.toc ol{columns:1}}
+.toc li{margin-bottom:8px;counter-increment:item}
+.toc li::before{
+  content:counter(item)".";
+  font-weight:600;
+  margin-right:6px;
+  color:var(--accent);
+}
+.toc a{color:var(--text-main);text-decoration:none}
+.toc a:hover{color:var(--accent-dark)}
+
+/* ===== Producto ===== */
+.product{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:24px;
+  margin:56px 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:24px;
+  transition:box-shadow .15s ease;
+}
+.product:hover{box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+.product img{width:220px;border-radius:8px}
+.product-info{flex:1;min-width:260px}
+.product h2{font-size:1.4rem;font-family:var(--font-heading);font-weight:600;margin:0 0 12px;color:var(--accent)}
+.product ul{margin:12px 0 0 18px}
+.product li{margin-bottom:6px}
+.buy-button{
+  display:inline-block;margin-top:12px;padding:12px 20px;
+  background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border-radius:6px;
+  transition:background .2s ease;
+}
+.buy-button:hover{background:var(--accent-dark)}
+
+/* ===== Comparativa ===== */
+.comparison-table{overflow-x:auto;margin-top:72px}
+.comparison-table table{
+  width:100%;border-collapse:collapse;min-width:720px;
+}
+.comparison-table th,.comparison-table td{
+  padding:14px 18px;border:1px solid var(--border);
+}
+.comparison-table th{
+  background:var(--bg-section);font-weight:600;text-align:center
 }
 
-h2 {
-  color: #0066cc;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
+/* ===== Footer ===== */
+footer{
+  background:var(--bg-card);
+  border-top:1px solid var(--border);
+  padding:40px 0;margin-top:96px;text-align:center;
+  font-size:.9rem;color:var(--text-muted);
 }
 
-.product {
-  background: white;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.product-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.product img {
-  width: 200px;
-  height: auto;
-  border-radius: 6px;
-}
-
-.product-info {
-  flex: 1;
-  min-width: 250px;
-}
-
-.buy-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #0073e6;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.buy-button:hover {
-  background-color: #005bb5;
-}
-
-.comparison-table table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.comparison-table th,
-.comparison-table td {
-  padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-.comparison-table th {
-  background-color: #f0f0f0;
-}
-
-.summary ul {
-  list-style: disc inside;
-  padding-left: 20px;
-}
-
-.summary ul li {
-  margin-bottom: 10px;
+/* ===== Responsive ===== */
+@media(max-width:600px){
+  .product{flex-direction:column;align-items:center}
+  .product img{width:100%;max-width:320px}
 }
