@@ -266,3 +266,38 @@ footer{
     padding: 10px 12px;
   }
 }
+/* Intento arreglo pantalla pequeña */
+
+@media(max-width: 600px) {
+  .product {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-img-wrapper {
+    align-self: center;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto 16px;
+    background: white;
+    border-radius: 12px;
+    padding: 8px;
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .product-content {
+    display: block;
+    width: 100%;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+}
