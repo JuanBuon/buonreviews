@@ -346,3 +346,49 @@ footer{
   width: auto;
   padding: 4px 0;
 }
+.glossary {
+  background: var(--bg-section);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 24px;
+  margin-top: 72px;
+}
+.glossary h2 {
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.glossary p {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+.glossary ul {
+  padding-left: 20px;
+}
+.glossary li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.glossary li strong {
+  color: var(--text-main);
+}
+.recomendacion {
+  background: var(--bg-section);
+  border-left: 4px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.recomendacion h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.resumen-final {
+  font-weight: 500;
+  margin-top: 24px;
+  font-size: 1rem;
+}
