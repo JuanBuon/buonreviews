@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Comparativas honestas de productos para ayudarte a decidir bien tus compras">
-  <title>BuonReviews</title>
+  <meta name="theme-color" content="#0b2f47">
+  <title>BuonReviews | Comparativas honestas de productos</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
 
@@ -19,37 +20,108 @@
   </script>
 </head>
 <body>
-  <header class="site-navbar">
-  <div class="container navbar-content">
-    <a href="/" class="logo-link">
-      <img src="/assets/img/logo-br.png" alt="BuonReviews logo" class="logo-img" />
-    </a>
-  </div>
-</header>
   <header class="site-header">
-    <h1>BuonReviews</h1>
-    <p class="tagline">Comparativas honestas de productos para los que investigamos antes de comprar</p>
+    <div class="container">
+      <a href="/" class="logo-link" aria-label="BuonReviews, inicio">
+        <img src="/assets/img/logo-br.png" alt="BuonReviews" class="logo-img" width="306" height="120">
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <ul>
+          <li class="nav-optional"><a href="/" aria-current="page">Inicio</a></li>
+          <li><a href="/#comparativas">Comparativas</a></li>
+          <li><a href="/sobre-mi/">Sobre mí</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main class="intro">
-    <h2>¡Bienvenido!</h2>
-    <p>BuonReviews nace del impulso caprichoso (pero exigente) de revisar bien antes de comprar. Aquí encontrarás comparativas claras, directas y sin rodeos sobre productos que realmente valen la pena.</p>
-    <p>¿Nuestro objetivo? Ahorrarte tiempo, dinero y disgustos con compras inútiles.</p>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Comparativas independientes</span>
+        <h1>Investigamos antes de comprar para que tú no tengas que hacerlo</h1>
+        <p>BuonReviews nace del impulso caprichoso (pero exigente) de revisar bien antes de comprar. Comparativas claras, directas y sin rodeos sobre productos que realmente valen la pena.</p>
+        <a href="#comparativas" class="btn btn-cta">Ver comparativas</a>
+      </div>
+    </section>
+
+    <section class="section" id="comparativas">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Últimos artículos</span>
+          <h2>Comparativas recientes</h2>
+        </div>
+
+        <div class="card-grid">
+          <a class="article-card" href="/blog/walkies/">
+            <div class="article-card-media">
+              <img src="/assets/img/Motorola_T92_H2O_Pack.webp" alt="Pack de walkie-talkies Motorola T92 H2O" width="220" height="220">
+            </div>
+            <div class="article-card-body">
+              <span class="eyebrow">Comunicación · PMR446</span>
+              <h3>Mejores walkie-talkies sin licencia en Amazon (2025)</h3>
+              <p>10 modelos comparados por alcance, autonomía, resistencia y precio, con recomendaciones según el uso.</p>
+              <span class="article-card-meta">10 productos analizados · Junio 2025</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cómo trabajamos</span>
+          <h2>¿Nuestro objetivo? Ahorrarte tiempo, dinero y disgustos</h2>
+        </div>
+        <div class="values">
+          <div class="value">
+            <h3>Investigación a fondo</h3>
+            <p>Comparamos fichas técnicas, reseñas y opiniones de usuarios antes de recomendar nada.</p>
+          </div>
+          <div class="value">
+            <h3>Sin rodeos</h3>
+            <p>Ventajas y contras claros en cada producto, para que veas rápido si encaja contigo.</p>
+          </div>
+          <div class="value">
+            <h3>Según tu uso</h3>
+            <p>Cada comparativa termina con recomendaciones concretas según para qué lo vayas a usar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <section class="toc">
-    <h2>Últimos artículos</h2>
-    <ol>
-      <li><a href="/blog/walkies">🔌 Mejores walkie talkies sin licencia en Amazon [2025]</a></li>
-    </ol>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 BuonReviews.com — Comparativas honestas y útiles para tus compras</p>
-    <a href="/aviso-legal">Aviso legal</a> ·
-    <a href="/politica-privacidad">Política de privacidad</a> ·
-    <a href="/contacto">Contacto</a> ·
-    <a href="/sobre-mi">Sobre mí</a>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <div class="footer-brand">Buon<span>Reviews</span></div>
+          <p>Comparativas honestas de productos para los que investigamos antes de comprar.</p>
+        </div>
+        <div>
+          <h3>Secciones</h3>
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#comparativas">Comparativas</a></li>
+            <li><a href="/sobre-mi/">Sobre mí</a></li>
+            <li><a href="/contacto/">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="/aviso-legal/">Aviso legal</a></li>
+            <li><a href="/politica-privacidad/">Política de privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BuonReviews.com</p>
+        <p>Como Afiliado de Amazon, BuonReviews obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables.</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
