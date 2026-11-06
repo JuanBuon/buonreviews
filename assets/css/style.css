@@ -454,6 +454,18 @@ strong{font-weight:600}
 .price-label{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
 .price-value{font-size:1.35rem;font-weight:800;color:var(--navy)}
 .price-note{font-size:.8rem;color:var(--text-muted)}
+.price-tier{
+  margin-left:6px;
+  padding:1px 8px;
+  border-radius:999px;
+  background:var(--amber-50);
+  color:var(--amber-600);
+  font-size:.85rem;
+  font-weight:800;
+  letter-spacing:.04em;
+  vertical-align:middle;
+}
+.table-wrap td.price-col{font-weight:700;color:var(--amber-600);letter-spacing:.04em}
 
 @media(max-width:720px){
   .product-head{padding:16px 18px}
@@ -617,6 +629,89 @@ strong{font-weight:600}
 @media(max-width:720px){
   .footer-main{grid-template-columns:1fr 1fr;gap:28px}
   .footer-main > div:first-child{grid-column:1 / -1}
+}
+
+/* ===== Datos legales ===== */
+.legal-data{
+  margin:16px 0 24px;
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+}
+.legal-data > div{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:16px;
+  padding:10px 16px;
+  border-bottom:1px solid var(--border);
+}
+.legal-data > div:nth-child(even){background:var(--surface)}
+.legal-data > div:last-child{border-bottom:0}
+.legal-data dt{font-weight:600;color:var(--navy)}
+.page ul{margin:0 0 16px;padding-left:22px}
+.page li{margin-bottom:10px}
+.legal-table{margin:16px 0 20px}
+.legal-table table{min-width:640px}
+.legal-table td:first-child{font-family:ui-monospace, SFMono-Regular, Consolas, monospace;font-size:.85rem}
+@media(max-width:600px){
+  .legal-data > div{grid-template-columns:1fr;gap:2px}
+}
+
+/* Botón "Configurar cookies" del pie */
+.footer-link-button{
+  padding:0;
+  border:0;
+  background:none;
+  font:inherit;
+  color:rgba(255,255,255,.85);
+  cursor:pointer;
+}
+.footer-link-button:hover{color:var(--amber)}
+
+/* ===== Aviso de cookies ===== */
+.cookie-banner{
+  position:fixed;
+  left:16px;
+  right:16px;
+  bottom:16px;
+  z-index:2000;
+  display:flex;
+  justify-content:center;
+  pointer-events:none;
+}
+.cookie-banner-inner{
+  pointer-events:auto;
+  width:100%;
+  max-width:760px;
+  padding:20px 24px;
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:0 12px 40px rgba(11,47,71,.22);
+  font-size:.92rem;
+  line-height:1.55;
+}
+.cookie-banner-title{font-weight:700;color:var(--navy);font-size:1rem;margin-bottom:6px}
+.cookie-banner-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+  margin-top:14px;
+}
+/* Mismo peso visual para Aceptar y Rechazar (criterio de la AEPD) */
+.cookie-btn{
+  min-width:130px;
+  background:var(--navy);
+  color:#fff;
+  border:0;
+  cursor:pointer;
+  font-family:inherit;
+}
+.cookie-btn:hover{background:var(--navy-700);color:#fff}
+@media(max-width:600px){
+  .cookie-banner{left:8px;right:8px;bottom:8px}
+  .cookie-banner-inner{padding:16px}
+  .cookie-banner-actions .btn{flex:1;min-width:0}
 }
 
 /* ===== Botón volver arriba (walkies.js) ===== */
